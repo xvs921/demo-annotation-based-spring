@@ -6,11 +6,12 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class HelloWorld {
+    @Autowired
+    @Qualifier("formalis")
     private Koszontes koszontes;
 
-    @Autowired
-    public HelloWorld(@Qualifier("formalis") Koszontes koszontes){
-        this.koszontes=koszontes;
+
+    public HelloWorld(){
     }
 
     public void hello()
